@@ -49,7 +49,6 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 }
 
 /*
-
 Frequency Counter - sameFrequency
 
 Write a function called sameFrequency. 
