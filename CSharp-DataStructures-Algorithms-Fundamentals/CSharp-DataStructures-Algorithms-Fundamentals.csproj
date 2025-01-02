@@ -6,4 +6,10 @@
     <RootNamespace>CSharp_DataStructures_Algorithms_Fundamentals</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="01-Frequency Counters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="01-Frequency Counters\" />
+  </ItemGroup>
 </Project>
