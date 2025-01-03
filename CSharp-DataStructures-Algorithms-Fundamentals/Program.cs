@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharp_DataStructures_Algorithms_Fundamentals
 {
@@ -37,7 +38,18 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             Console.WriteLine(MultiplePointers.AreThereDuplicates_MP('a', 'b', 'c', 'a')); // true
             Console.WriteLine();
 
+            int[] sameArray = { 1, 2, 3, 2 };
+            List<int> sameList = new List<int> { 9, 1, 4, 4 };
+            bool sameResult = FrequencyCounters3.Same(sameArray, sameList);
+            Console.WriteLine(sameResult); // Output: true or false
 
+            int[] sameArray2 = { 1, 2, 3, 2, 5 };
+            int[] sameArray3 = { 9, 1, 4, 4, 11 };
+            bool sameResult2 = FrequencyCounters4.SameRefactored(sameArray2, sameArray3);
+            Console.WriteLine(sameResult2); // Output: false
+
+            bool anagramResult = FrequencyCounters5.ValidAnagram("anagrams", "nagaramm");
+            Console.WriteLine(anagramResult); // Output: false
 
         }
     }
