@@ -4,7 +4,7 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
     using System;
     using System.Collections.Generic;
 
-    public class FrequencyCounters
+    public static partial class FrequencyCounters
     {
         public static bool SameFrequency(int num1, int num2)
         {

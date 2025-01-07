@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public static class FrequencyCounters3
+    public static partial class FrequencyCounters
     {
         public static bool Same(int[] arr1, List<int> arr2)
         {

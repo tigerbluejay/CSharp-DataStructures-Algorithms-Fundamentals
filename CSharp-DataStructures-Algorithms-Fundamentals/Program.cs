@@ -10,6 +10,7 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             ////////////////////////////////////////////////////////////
             ////////////// 01- FREQUENCY COUNTERS //////////////////////
             ////////////////////////////////////////////////////////////
+
             Console.WriteLine("Frequency Counters");
             Console.WriteLine();
             Console.WriteLine(FrequencyCounters.SameFrequency(182, 281)); // true
@@ -18,39 +19,72 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             Console.WriteLine(FrequencyCounters.SameFrequency(22, 222)); // false
             Console.WriteLine();
 
-            Console.WriteLine(FrequencyCounters2.AreThereDuplicates(1, 2, 3)); // false
-            Console.WriteLine(FrequencyCounters2.AreThereDuplicates(1, 2, 2)); // true
-            Console.WriteLine(FrequencyCounters2.AreThereDuplicates('a', 'b', 'c', 'a')); // true
+            Console.WriteLine(FrequencyCounters.AreThereDuplicates(1, 2, 3)); // false
+            Console.WriteLine(FrequencyCounters.AreThereDuplicates(1, 2, 2)); // true
+            Console.WriteLine(FrequencyCounters.AreThereDuplicates('a', 'b', 'c', 'a')); // true
             Console.WriteLine();
 
-            Console.WriteLine(FrequencyCounters2.AreThereDuplicates_FC(1, 2, 3)); // false
-            Console.WriteLine(FrequencyCounters2.AreThereDuplicates_FC(1, 2, 2)); // true
-            Console.WriteLine(FrequencyCounters2.AreThereDuplicates_FC('a', 'b', 'c', 'a')); // true
+            Console.WriteLine(FrequencyCounters.AreThereDuplicates_FC(1, 2, 3)); // false
+            Console.WriteLine(FrequencyCounters.AreThereDuplicates_FC(1, 2, 2)); // true
+            Console.WriteLine(FrequencyCounters.AreThereDuplicates_FC('a', 'b', 'c', 'a')); // true
             Console.WriteLine();
 
-            Console.WriteLine(MultiplePointers.AreThereDuplicates(1, 2, 3)); // false
-            Console.WriteLine(MultiplePointers.AreThereDuplicates(1, 2, 2)); // true
-            Console.WriteLine(MultiplePointers.AreThereDuplicates('a', 'b', 'c', 'a')); // true
+            Console.WriteLine(FrequencyCounters.AreThereDuplicatesMP(1, 2, 3)); // false
+            Console.WriteLine(FrequencyCounters.AreThereDuplicatesMP(1, 2, 2)); // true
+            Console.WriteLine(FrequencyCounters.AreThereDuplicatesMP('a', 'b', 'c', 'a')); // true
             Console.WriteLine();
 
-            Console.WriteLine(MultiplePointers.AreThereDuplicates_MP(1, 2, 3)); // false
-            Console.WriteLine(MultiplePointers.AreThereDuplicates_MP(1, 2, 2)); // true
-            Console.WriteLine(MultiplePointers.AreThereDuplicates_MP('a', 'b', 'c', 'a')); // true
+            Console.WriteLine(FrequencyCounters.AreThereDuplicatesMP2(1, 2, 3)); // false
+            Console.WriteLine(FrequencyCounters.AreThereDuplicatesMP2(1, 2, 2)); // true
+            Console.WriteLine(FrequencyCounters.AreThereDuplicatesMP2('a', 'b', 'c', 'a')); // true
             Console.WriteLine();
 
-            int[] sameArray = { 1, 2, 3, 2 };
-            List<int> sameList = new List<int> { 9, 1, 4, 4 };
-            bool sameResult = FrequencyCounters3.Same(sameArray, sameList);
-            Console.WriteLine(sameResult); // Output: true or false
+            Console.WriteLine(FrequencyCounters.Same(new int[] { 1, 2, 3, 2 }, new List<int> { 9, 1, 4, 4 }));
+            // Output: true or false
+            Console.WriteLine();
 
-            int[] sameArray2 = { 1, 2, 3, 2, 5 };
-            int[] sameArray3 = { 9, 1, 4, 4, 11 };
-            bool sameResult2 = FrequencyCounters4.SameRefactored(sameArray2, sameArray3);
-            Console.WriteLine(sameResult2); // Output: false
+            Console.WriteLine(FrequencyCounters.SameRefactored(new int[] { 1, 2, 3, 2, 5 }, new int[] { 9, 1, 4, 4, 11 }));
+            // Output: false
+            Console.WriteLine();
 
-            bool anagramResult = FrequencyCounters5.ValidAnagram("anagrams", "nagaramm");
-            Console.WriteLine(anagramResult); // Output: false
+            Console.WriteLine(FrequencyCounters.ValidAnagram("anagrams", "nagaramm"));
+            // Output: false
+            Console.WriteLine();
 
+            Console.WriteLine(FrequencyCounters.ConstructNote("aa", "abc"));          // Output: false
+            Console.WriteLine(FrequencyCounters.ConstructNote("abc", "dcba"));        // Output: true
+            Console.WriteLine(FrequencyCounters.ConstructNote("aabbcc", "bcabcaddff")); // Output: true
+
+            Console.WriteLine(string.Join(", ",
+                FrequencyCounters.FindAllDuplicates(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 })));
+            // Output: 2, 3
+            Console.WriteLine(string.Join(", ",
+                FrequencyCounters.FindAllDuplicates(new int[] { 4, 3, 2, 1, 0 })));
+            // Output: (empty)
+            Console.WriteLine(string.Join(", ",
+                FrequencyCounters.FindAllDuplicates(new int[] { 4, 3, 2, 1, 0, 1, 2, 3 })));
+            // Output: 1, 2, 3
+
+            Console.WriteLine(FrequencyCounters.FindPair(new int[] { 6, 1, 4, 10, 2, 4 }, 2));
+            // Output: true
+            Console.WriteLine(FrequencyCounters.FindPair(new int[] { 8, 6, 2, 4, 1, 0, 2, 5, 13 }, 1));
+            // Output: true
+            Console.WriteLine(FrequencyCounters.FindPair(new int[] { 4, -2, 3, 10 }, -6));
+            // Output: true
+            Console.WriteLine(FrequencyCounters.FindPair(new int[] { 6, 1, 4, 10, 2, 4 }, 22));
+            // Output: false
+            Console.WriteLine(FrequencyCounters.FindPair(new int[] { }, 0));
+            // Output: false
+            Console.WriteLine(FrequencyCounters.FindPair(new int[] { 5, 5 }, 0));
+            // Output: true
+            Console.WriteLine(FrequencyCounters.FindPair(new int[] { -4, 4 }, -8));
+            // Output: true
+            Console.WriteLine(FrequencyCounters.FindPair(new int[] { -4, 4 }, 8));
+            // Output: true
+            Console.WriteLine(FrequencyCounters.FindPair(new int[] { 1, 3, 4, 6 }, -2));
+            // Output: true
+            Console.WriteLine(FrequencyCounters.FindPair(new int[] { 0, 1, 3, 4, 6 }, -2));
+            // Output: true
         }
     }
 }

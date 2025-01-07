@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public class FrequencyCounters2
+    public static partial class FrequencyCounters
     {
         // Frequency Counter Approach (O(n) Time, O(n) Space)
         public static bool AreThereDuplicates(params object[] args)
@@ -46,13 +46,9 @@
             return false;
         }
 
-    }
-
-    public class MultiplePointers
-    {
 
         //  Multiple Pointers Approach(O(n log n) Time, O(1) Space)
-        public static bool AreThereDuplicates(params object[] args)
+        public static bool AreThereDuplicatesMP(params object[] args)
         {
             // Sort the arguments to bring duplicates together
             Array.Sort(args);
@@ -72,7 +68,7 @@
 
 
         // Multiple Pointers Solution - (O(n log n) Time, O(1) Space):
-        public static bool AreThereDuplicates_MP(params object[] args)
+        public static bool AreThereDuplicatesMP2(params object[] args)
         {
             // Convert the arguments to a Set (removes duplicates)
             var seen = new HashSet<object>(args);

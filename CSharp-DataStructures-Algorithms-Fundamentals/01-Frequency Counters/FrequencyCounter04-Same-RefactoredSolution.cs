@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public static class FrequencyCounters4
+    public static partial class FrequencyCounters
     {
 
         public static bool SameRefactored(int[] arr1, int[] arr2)

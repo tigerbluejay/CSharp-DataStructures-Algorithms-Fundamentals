@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public static class FrequencyCounters5
+    public static partial class FrequencyCounters
     { 
 
         public static bool ValidAnagram(string first, string second)
