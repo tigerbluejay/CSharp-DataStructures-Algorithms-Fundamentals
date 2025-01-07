@@ -85,6 +85,16 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             // Output: true
             Console.WriteLine(FrequencyCounters.FindPair(new int[] { 0, 1, 3, 4, 6 }, -2));
             // Output: true
+
+            ////////////////////////////////////////////////////////////
+            ////////////// 02- MULTIPLE POINTERS ///////////////////////
+            ////////////////////////////////////////////////////////////
+
+            Console.WriteLine("Multiple Pointers");
+            Console.WriteLine();
+
+            Console.WriteLine(MultiplePointers.CountUniqueValues(new int[] { 1, 2, 2, 5, 7, 7, 99 }));
+            // Output: 5
         }
     }
 }

@@ -8,8 +8,10 @@
 
   <ItemGroup>
     <None Remove="01-Frequency Counters\" />
+    <None Remove="02-MultiplePointers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01-Frequency Counters\" />
+    <Folder Include="02-MultiplePointers\" />
   </ItemGroup>
 </Project>
