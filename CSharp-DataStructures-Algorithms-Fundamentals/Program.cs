@@ -95,6 +95,19 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 
             Console.WriteLine(MultiplePointers.CountUniqueValues(new int[] { 1, 2, 2, 5, 7, 7, 99 }));
             // Output: 5
+
+            Console.WriteLine(MultiplePointers.SumZeroNaive(new int[] { -4, -3, -2, -1, 0, 1, 2, 5 }));
+            Console.WriteLine(MultiplePointers.NewSumZero(new int[] { -4, -3, -2, -1, 0, 1, 2, 3, 10 }));
+
+            Console.WriteLine(MultiplePointers.IsSubsequenceIterative("abc", "ahbgdc")); // Output: true
+            Console.WriteLine(MultiplePointers.IsSubsequenceRecursive("abc", "ahbgdc"));
+
+            Console.WriteLine(MultiplePointers.AveragePair(new int[] { 1, 2, 3 }, 2.5)); // true
+            Console.WriteLine(MultiplePointers.AveragePair(new int[] { 1, 3, 3, 5, 6, 7, 10, 12, 19 }, 8)); // true
+            Console.WriteLine(MultiplePointers.AveragePair(new int[] { -1, 0, 3, 4, 5, 6 }, 4.1)); // false
+            Console.WriteLine(MultiplePointers.AveragePair(new int[] { }, 4)); // false
+
+
         }
     }
 }
