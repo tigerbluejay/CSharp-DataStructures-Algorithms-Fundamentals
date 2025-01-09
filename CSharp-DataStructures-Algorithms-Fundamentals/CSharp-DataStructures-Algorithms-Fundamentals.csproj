@@ -9,9 +9,11 @@
   <ItemGroup>
     <None Remove="01-Frequency Counters\" />
     <None Remove="02-MultiplePointers\" />
+    <None Remove="03-Sliding Window\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01-Frequency Counters\" />
     <Folder Include="02-MultiplePointers\" />
+    <Folder Include="03-Sliding Window\" />
   </ItemGroup>
 </Project>

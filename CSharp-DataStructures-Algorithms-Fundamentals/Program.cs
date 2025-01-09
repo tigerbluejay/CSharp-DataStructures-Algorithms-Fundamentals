@@ -107,6 +107,26 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             Console.WriteLine(MultiplePointers.AveragePair(new int[] { -1, 0, 3, 4, 5, 6 }, 4.1)); // false
             Console.WriteLine(MultiplePointers.AveragePair(new int[] { }, 4)); // false
 
+            ////////////////////////////////////////////////////////////
+            ////////////// 03- SLIDING WINDOW //////////////////////////
+            ////////////////////////////////////////////////////////////
+
+            Console.WriteLine(SlidingWindow.MaxSubarraySum(new int[] { 2, 6, 9, 2, 1, 8, 5, 6, 3 }, 3));
+            Console.WriteLine(SlidingWindow.MaxSubarraySum2(new int[] { 2, 6, 9, 2, 1, 8, 5, 6, 3 }, 3));
+
+            Console.WriteLine(SlidingWindow.MaxSubarraySum3(new int[] { 100, 200, 300, 400 }, 2)); // 700
+            Console.WriteLine(SlidingWindow.MaxSubarraySum3(new int[] { 1, 4, 2, 10, 23, 3, 1, 0, 20 }, 4)); // 39
+            Console.WriteLine(SlidingWindow.MaxSubarraySum3(new int[] { -3, 4, 0, -2, 6, -1 }, 2)); // 5
+            Console.WriteLine(SlidingWindow.MaxSubarraySum3(new int[] { 3, -2, 7, -4, 1, -1, 4, -2, 1 }, 2)); // 5
+            Console.WriteLine(SlidingWindow.MaxSubarraySum3(new int[] { 2, 3 }, 3)); // null
+
+            Console.WriteLine(SlidingWindow.MinSubArrayLen(new int[] { 2, 3, 1, 2, 4, 3 }, 7)); // 2
+            Console.WriteLine(SlidingWindow.MinSubArrayLen(new int[] { 2, 1, 6, 5, 4 }, 9));    // 2
+            Console.WriteLine(SlidingWindow.MinSubArrayLen(new int[] { 3, 1, 7, 11, 2, 9, 8, 21, 62, 33, 19 }, 52)); // 1
+            Console.WriteLine(SlidingWindow.MinSubArrayLen(new int[] { 1, 4, 16, 22, 5, 7, 8, 9, 10 }, 39));         // 3
+            Console.WriteLine(SlidingWindow.MinSubArrayLen(new int[] { 1, 4, 16, 22, 5, 7, 8, 9, 10 }, 55));         // 5
+            Console.WriteLine(SlidingWindow.MinSubArrayLen(new int[] { 4, 3, 3, 8, 1, 2, 3 }, 11));                 // 2
+            Console.WriteLine(SlidingWindow.MinSubArrayLen(new int[] { 1, 4, 16, 22, 5, 7, 8, 9, 10 }, 95));         // 0
 
         }
     }
