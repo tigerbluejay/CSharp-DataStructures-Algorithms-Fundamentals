@@ -128,6 +128,12 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             Console.WriteLine(SlidingWindow.MinSubArrayLen(new int[] { 4, 3, 3, 8, 1, 2, 3 }, 11));                 // 2
             Console.WriteLine(SlidingWindow.MinSubArrayLen(new int[] { 1, 4, 16, 22, 5, 7, 8, 9, 10 }, 95));         // 0
 
+            Console.WriteLine(SlidingWindow.FindLongestSubstring("rithmschool")); // Output: 7
+            Console.WriteLine(SlidingWindow.FindLongestSubstring("thisisawesome")); // Output: 6
+            Console.WriteLine(SlidingWindow.FindLongestSubstring("thecatinthehat")); // Output: 7
+            Console.WriteLine(SlidingWindow.FindLongestSubstring("bbbbbbb")); // Output: 1
+            Console.WriteLine(SlidingWindow.FindLongestSubstring("longestsubstring")); // Output: 8
+            Console.WriteLine(SlidingWindow.FindLongestSubstring("thisishowwedoit")); // Output: 6
         }
     }
 }
