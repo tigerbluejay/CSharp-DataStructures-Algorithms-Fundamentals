@@ -134,6 +134,18 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             Console.WriteLine(SlidingWindow.FindLongestSubstring("bbbbbbb")); // Output: 1
             Console.WriteLine(SlidingWindow.FindLongestSubstring("longestsubstring")); // Output: 8
             Console.WriteLine(SlidingWindow.FindLongestSubstring("thisishowwedoit")); // Output: 6
+
+            ////////////////////////////////////////////////////////////
+            /////////////////// 03- RECURSION //////////////////////////
+            ////////////////////////////////////////////////////////////
+
+            Recursion.WakeUp();
+
+            Console.WriteLine(Recursion.FactorialIterative(5));  // Example: prints 120
+
+            Console.WriteLine(Recursion.FactorialRecursive(5));  // Example: prints 120
+
+
         }
     }
 }

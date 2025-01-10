@@ -10,10 +10,12 @@
     <None Remove="01-Frequency Counters\" />
     <None Remove="02-MultiplePointers\" />
     <None Remove="03-Sliding Window\" />
+    <None Remove="04-Recursion\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01-Frequency Counters\" />
     <Folder Include="02-MultiplePointers\" />
     <Folder Include="03-Sliding Window\" />
+    <Folder Include="04-Recursion\" />
   </ItemGroup>
 </Project>
