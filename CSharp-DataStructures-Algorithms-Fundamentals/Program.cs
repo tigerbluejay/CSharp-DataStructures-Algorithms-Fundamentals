@@ -145,7 +145,15 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 
             Console.WriteLine(Recursion.FactorialRecursive(5));  // Example: prints 120
 
+            Console.WriteLine(Recursion.SumRange(4));
 
+            Console.WriteLine(string.Join(", ", Recursion.CollectOddValues(new List<int> { 1, 2, 3, 4, 5 })));
+
+            List<int> result = Recursion.CollectOddValues(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+            foreach (int value in result)
+            {
+                Console.WriteLine(value);
+            }
         }
     }
 }
