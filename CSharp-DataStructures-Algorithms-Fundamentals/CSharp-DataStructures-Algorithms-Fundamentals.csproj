@@ -11,11 +11,13 @@
     <None Remove="02-MultiplePointers\" />
     <None Remove="03-Sliding Window\" />
     <None Remove="04-Recursion\" />
+    <None Remove="05-Recursion II\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01-Frequency Counters\" />
-    <Folder Include="02-MultiplePointers\" />
+    <Folder Include="02-Multiple Pointers\" />
     <Folder Include="03-Sliding Window\" />
     <Folder Include="04-Recursion\" />
+    <Folder Include="05-Recursion II\" />
   </ItemGroup>
 </Project>

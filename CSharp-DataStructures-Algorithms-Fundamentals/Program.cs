@@ -136,7 +136,7 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             Console.WriteLine(SlidingWindow.FindLongestSubstring("thisishowwedoit")); // Output: 6
 
             ////////////////////////////////////////////////////////////
-            /////////////////// 03- RECURSION //////////////////////////
+            /////////////////// 04- RECURSION //////////////////////////
             ////////////////////////////////////////////////////////////
 
             Recursion.WakeUp();
@@ -154,6 +154,24 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             {
                 Console.WriteLine(value);
             }
+
+
+            ////////////////////////////////////////////////////////////
+            /////////////////// 05- RECURSION II ///////////////////////
+            ////////////////////////////////////////////////////////////
+
+
+            Console.WriteLine(RecursionII.Factorial(5));
+
+            Console.WriteLine(RecursionII.Fibonacci(5));
+
+            Console.WriteLine(RecursionII.Power(2, 5));
+
+            int[] RecursionIInumbers = { 1, 2, 3, 4, 5 };
+            Console.WriteLine(RecursionII.ProductOfArray(RecursionIInumbers));
+
+            Console.WriteLine(RecursionII.RecursiveRange(5));
+
         }
     }
 }
