@@ -172,6 +172,27 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 
             Console.WriteLine(RecursionII.RecursiveRange(5));
 
+            ////////////////////////////////////////////////////////////
+            /////////////////// 06- RECURSION III //////////////////////
+            ////////////////////////////////////////////////////////////
+
+
+            Console.WriteLine(RecursionIII.Reverse("elephant"));
+
+            Console.WriteLine(RecursionIII.IsPalindrome("evitative"));
+
+            int[] someRecursiveNumbers = { 1, 3, 5, 8, 10 };
+            Console.WriteLine(RecursionIII.
+                SomeRecursive(someRecursiveNumbers, RecursionIII.IsOdd)); // Output: true
+            int[] someRecursiveNumbers2 = { 10, 8, 5, 3, 1 };
+            Console.WriteLine(RecursionIII.
+                SomeRecursive(someRecursiveNumbers2, RecursionIII.IsOdd)); // Output: true
+
+            var nestedArray = new object[] { 1, new object[] { 2, 3 }, 4, new object[] { 5, new object[] { 6, 7 } } };
+            var flattenedArray = RecursionIII.Flatten(nestedArray);
+            Console.WriteLine(string.Join(", ", flattenedArray)); // Output: 1, 2, 3, 4, 5, 6, 7
+
+
         }
     }
 }
