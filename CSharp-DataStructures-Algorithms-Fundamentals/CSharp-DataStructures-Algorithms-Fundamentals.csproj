@@ -13,6 +13,7 @@
     <None Remove="04-Recursion\" />
     <None Remove="05-Recursion II\" />
     <None Remove="06-Recursion III\" />
+    <None Remove="07-Recursion IV\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01-Frequency Counters\" />
@@ -21,5 +22,6 @@
     <Folder Include="04-Recursion\" />
     <Folder Include="05-Recursion II\" />
     <Folder Include="06-Recursion III\" />
+    <Folder Include="07-Recursion IV\" />
   </ItemGroup>
 </Project>

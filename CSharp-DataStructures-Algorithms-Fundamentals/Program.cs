@@ -193,6 +193,83 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             Console.WriteLine(string.Join(", ", flattenedArray)); // Output: 1, 2, 3, 4, 5, 6, 7
 
 
+            ////////////////////////////////////////////////////////////
+            /////////////////// 07- RECURSION IV ///////////////////////
+            ////////////////////////////////////////////////////////////
+
+            List<string> words = new List<string> { "hello", "world", "how", "are", "you" };
+            List<string> capitalizedWords = RecursionIV.CapitalizeFirst(words);
+            foreach (var word in capitalizedWords)
+            {
+                Console.WriteLine(word);
+            }
+
+            List<string> words2 = new List<string> { "hello", "world", "how", "are", "you" };
+            List<string> capitalizedWords2 = RecursionIV.CapitalizeWords(words);
+
+            foreach (var word in capitalizedWords)
+            {
+                Console.WriteLine(word);
+            }
+
+            var obj = new Dictionary<string, object>();
+            obj.Add("stuff", "foo");
+            var data = new Dictionary<string, object>();
+            obj.Add("data", data);
+            var val = new Dictionary<string, object>();
+            data.Add("val", val);
+            var thing = new Dictionary<string, object>();
+            val.Add("thing", thing);
+            thing.Add("info", "bar");
+            var moreInfo = new Dictionary<string, object>();
+            thing.Add("moreInfo", moreInfo);
+            var evenMoreInfo = new Dictionary<string, object>();
+            moreInfo.Add("evenMoreInfo", evenMoreInfo);
+            evenMoreInfo.Add("weMadeIt", "baz");
+
+            //var obj = new Dictionary<string, object>
+            //{
+            //{ "stuff", "foo" },
+            //{ "data", new Dictionary<string, object>
+            //    {
+            //        { "val", new Dictionary<string, object>
+            //            {
+            //                { "thing", new Dictionary<string, object>
+            //                    {
+            //                        { "info", "bar" },
+            //                        { "moreInfo", new Dictionary<string, object>
+            //                            {
+            //                                { "evenMoreInfo", new Dictionary<string, object>
+            //                                    {
+            //                                        { "weMadeIt", "baz" }
+            //                                    }
+            //                                }
+            //                            }
+            //                        }
+            //                    }
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
+            //};
+
+            List<string> collectStringsresult = RecursionIV.CollectStrings(obj);
+            Console.WriteLine(string.Join(", ", collectStringsresult));
+            // Output: foo, bar, baz
+
+            List<string> collectStringsResultPure = RecursionIV.CollectStringsPure(obj);
+            Console.WriteLine(string.Join(", ", collectStringsResultPure));
+            // Output: foo, bar, baz
+
+
         }
     }
 }
+
+/*
+CollectStrings
+
+Write a function called collectStrings which accepts an Dictionary<string,object> and 
+returns an array of all the nested values of type object that have a typeof string
+*/
