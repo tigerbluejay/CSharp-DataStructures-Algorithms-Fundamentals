@@ -56,3 +56,10 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 
     }
 }
+
+/*
+CollectStrings
+
+Write a function called collectStrings which accepts an Dictionary<string,object> and 
+returns an array of all the nested values of type object that have a typeof string
+*/

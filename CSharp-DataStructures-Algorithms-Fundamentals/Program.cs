@@ -262,14 +262,118 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             Console.WriteLine(string.Join(", ", collectStringsResultPure));
             // Output: foo, bar, baz
 
+            var obj1 = new Dictionary<string, object>
+            {
+                { "outer", 2 },
+                { "obj", new Dictionary<string, object>
+                    {
+                        { "inner", 2 },
+                        { "otherObj", new Dictionary<string, object>
+                            {
+                                { "superInner", 2 },
+                                { "notANumber", true },
+                                { "alsoNotANumber", "yup" }
+                            }
+                        }
+                    }
+                }
+            };
+
+            var obj2 = new Dictionary<string, object>
+            {
+                { "a", 2 },
+                { "b", new Dictionary<string, object>
+                    {
+                        { "b", 2 },
+                        { "bb", new Dictionary<string, object>
+                            {
+                                { "b", 3 },
+                                { "bb", new Dictionary<string, object>
+                                    {
+                                        { "b", 2 }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                { "c", new Dictionary<string, object>
+                    {
+                        { "c", new Dictionary<string, object>
+                            {
+                                { "c", 2 }
+                            }
+                        },
+                        { "cc", "ball" },
+                        { "ccc", 5 }
+                    }
+                },
+                { "d", 1 },
+                { "e", new Dictionary<string, object>
+                    {
+                        { "e", new Dictionary<string, object>
+                            {
+                                { "e", 2 }
+                            }
+                        },
+                       { "ee", "car" }
+                    }
+                }
+            };
+
+
+            Console.WriteLine(RecursionIV.NestedEvenSum(obj1)); // 6
+            Console.WriteLine(RecursionIV.NestedEvenSum(obj2)); // 10
+
+            //var obj3 = new Dictionary<string, object>
+            //{
+            //    { "num", 1 },
+            //    { "test", new List<object>() },
+            //    { "data", new Dictionary<string, object>
+            //        {
+            //            { "val", 4 },
+            //            { "info", new Dictionary<string, object>
+            //                {
+            //                    { "isRight", true },
+            //                    { "random", 66 }
+            //                }
+            //            }
+            //        }
+            //    }
+            //};
+
+            // Step 1: Create the outer dictionary
+            var obj3 = new Dictionary<string, object>();
+            obj3["num"] = 1;
+            obj3["test"] = new List<object>();
+
+            var dataDict = new Dictionary<string, object>();
+            dataDict["val"] = 4;
+
+            var infoDict = new Dictionary<string, object>();
+            infoDict["isRight"] = true;
+            infoDict["random"] = 66;
+
+            dataDict["info"] = infoDict;
+
+            obj3["data"] = dataDict;
+
+            // Print the result (for demonstration purposes)
+            PrintDictionary(obj3);
+
+            // Utility function to print dictionary (for demonstration purposes)
+            void PrintDictionary(Dictionary<string, object> dictionary)
+            {
+                foreach (var kvp in dictionary)
+                {
+                    Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+                    if (kvp.Value is Dictionary<string, object> nestedDict)
+                    {
+                        PrintDictionary(nestedDict);
+                    }
+                }
+            }
 
         }
     }
 }
-
-/*
-CollectStrings
-
-Write a function called collectStrings which accepts an Dictionary<string,object> and 
-returns an array of all the nested values of type object that have a typeof string
-*/
