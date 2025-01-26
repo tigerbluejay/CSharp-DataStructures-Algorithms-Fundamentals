@@ -374,6 +374,25 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
                 }
             }
 
+            ////////////////////////////////////////////////////////////
+            ///////////// 08- SEARCHING ALGORITHMS /////////////////////
+            ////////////////////////////////////////////////////////////
+
+
+            int[] arrLS = { 34, 51, 1, 2, 3, 45, 56, 687 };
+            int targetLS = 56;
+            Console.WriteLine(SearchingAlgorithms.LinearSearch(arrLS, targetLS); // Output: 6
+
+
+            int[] arrBS = { 2, 5, 6, 9, 13, 15, 28, 30 };
+            int targetBS = 28;
+            Console.WriteLine(SearchingAlgorithms.BinarySearch(arrBS, targetBS); // Output: 6
+            Console.WriteLine(SearchingAlgorithms.BinarySearchR(arrBS, targetBS); // Output: 6
+
+            string longStrSS = "lorie loled";
+            string shortStrSS = "lol";
+            Console.WriteLine(SearchingAlgorithms.NaiveSearchSS(longStrSS, shortStrSS); // Output: 1
+
         }
     }
 }
