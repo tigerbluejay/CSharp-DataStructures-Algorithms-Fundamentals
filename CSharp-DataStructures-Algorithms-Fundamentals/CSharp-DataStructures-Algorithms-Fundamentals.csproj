@@ -15,6 +15,7 @@
     <None Remove="06-Recursion III\" />
     <None Remove="07-Recursion IV\" />
     <None Remove="08-Searching Algorithms\" />
+    <None Remove="09-Sorting Algorithms\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01-Frequency Counters\" />
@@ -25,5 +26,6 @@
     <Folder Include="06-Recursion III\" />
     <Folder Include="07-Recursion IV\" />
     <Folder Include="08-Searching Algorithms\" />
+    <Folder Include="09-Sorting Algorithms\" />
   </ItemGroup>
 </Project>

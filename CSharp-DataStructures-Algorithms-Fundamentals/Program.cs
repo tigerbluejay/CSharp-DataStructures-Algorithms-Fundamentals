@@ -393,6 +393,22 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             string shortStrSS = "lol";
             Console.WriteLine(SearchingAlgorithms.NaiveSearchSS(longStrSS, shortStrSS); // Output: 1
 
+            ////////////////////////////////////////////////////////////
+            /////////////// 09- SORTING ALGORITHMS /////////////////////
+            ////////////////////////////////////////////////////////////
+
+            int[] arrBubbleS = { 8, 1, 2, 3, 4, 5, 6, 7 };
+            SortingAlgorithms.BubbleSort(arrBubbleS);
+            Console.WriteLine("Sorted Array: " + string.Join(", ", arrBubbleS));
+
+            int[] arrOBS = { 8, 1, 2, 3, 4, 5, 6, 7 };
+            SortingAlgorithms.OptimizedBubbleSort(arrOBS);
+            Console.WriteLine("Sorted Array: " + string.Join(", ", arrOBS));
+
+            int[] arrIS = { 2, 1, 9, 76, 4 };
+            SortingAlgorithms.InsertionSort(arrIS);
+            Console.WriteLine("Sorted Array: " + string.Join(", ", arrIS));
+
         }
     }
 }
