@@ -409,6 +409,38 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             SortingAlgorithms.InsertionSort(arrIS);
             Console.WriteLine("Sorted Array: " + string.Join(", ", arrIS));
 
+            int[] arrSS = { 0, 2, 34, 22, 10, 19, 17 };
+            SortingAlgorithms.SelectionSort(arrSS);
+            Console.WriteLine(string.Join(", ", arrSS));
+
+            int numbertoAnalyze = 48043729;
+            int digitPosition = 3;
+            int[] numberArraytoAnalyze = { 20, 342210, 1917 };
+            SortingAlgorithms.GetDigit(numbertoAnalyze, digitPosition);
+            SortingAlgorithms.DigitCount(numbertoAnalyze);
+            SortingAlgorithms.MostDigits(numberArraytoAnalyze);
+
+            int[] numsRS = { 23, 345, 5467, 12, 2345, 9852 };
+            int[] sortedRS = SortingAlgorithms.RadixSort(numsRS);
+            Console.WriteLine(string.Join(", ", sortedRS));
+            // Output: 12, 23, 345, 2345, 5467, 9852
+
+            var resultMerge = SortingAlgorithms.
+                Merge(new List<int> { 100, 200 },
+                new List<int> { 1, 2, 3, 5, 6 });
+            Console.WriteLine(string.Join(", ", resultMerge));
+
+            var resultMS = SortingAlgorithms.
+                MergeSort(new List<int> { 10, 24, 76, 73, 15, 20, 3, 19 });
+            Console.WriteLine(string.Join(", ", resultMS));
+
+
+
+
+
+
+
+
         }
     }
 }
