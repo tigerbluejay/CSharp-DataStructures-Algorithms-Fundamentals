@@ -434,10 +434,39 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
                 MergeSort(new List<int> { 10, 24, 76, 73, 15, 20, 3, 19 });
             Console.WriteLine(string.Join(", ", resultMS));
 
+            int[] arrPQS = { 4, 8, 2, 1, 5, 7, 6, 3 };
+            int pivotIndexPQS = SortingAlgorithms.Pivot(arr, 0, arr.Length - 1);
+            Console.WriteLine("Pivot index: " + pivotIndexPQS);
+            Console.WriteLine("Array after pivot: " + string.Join(", ", arrPQS));
 
+            int[] arrQS = { 4, 6, 9, 1, 2, 5, 3 };
+            SortingAlgorithms.QuickSort(arrQS, 0, arrQS.Length - 1);
+            Console.WriteLine("Sorted Array: " + string.Join(", ", arrQS));
 
+            Console.WriteLine(SortingAlgorithms
+                .CountZeroes(new int[] { 1, 1, 1, 1, 0, 0 }));
+            // Output: 2
+            Console.WriteLine(SortingAlgorithms.
+                CountZeroes(new int[] { 1, 0, 0, 0, 0 }));
+            // Output: 4
+            Console.WriteLine(SortingAlgorithms.
+                CountZeroes(new int[] { 0, 0, 0 }));
+            // Output: 3
+            Console.WriteLine(SortingAlgorithms.
+                CountZeroes(new int[] { 1, 1, 1, 1 }));
+            // Output: 0
 
+            Console.WriteLine(SortingAlgorithms.FindRotatedIndex(new int[] { 3, 4, 1, 2 }, 4)); // Output: 1
+            Console.WriteLine(SortingAlgorithms.FindRotatedIndex(new int[] { 6, 7, 8, 9, 1, 2, 3, 4 }, 8)); // Output: 2
+            Console.WriteLine(SortingAlgorithms.FindRotatedIndex(new int[] { 6, 7, 8, 9, 1, 2, 3, 4 }, 3)); // Output: 6
+            Console.WriteLine(SortingAlgorithms.FindRotatedIndex(new int[] { 37, 44, 66, 102, 10, 22 }, 14)); // Output: -1
+            Console.WriteLine(SortingAlgorithms.FindRotatedIndex(new int[] { 6, 7, 8, 9, 1, 2, 3, 4 }, 12)); // Output: -1
+            Console.WriteLine(SortingAlgorithms.FindRotatedIndex(new int[] { 11, 12, 13, 14, 15, 16, 3, 5, 7, 9 }, 16)); // Output: 5
 
+            Console.WriteLine(SortingAlgorithms.SortedFrequency(new int[] { 1, 1, 2, 2, 2, 2, 3 }, 2)); // 4
+            Console.WriteLine(SortingAlgorithms.SortedFrequency(new int[] { 1, 1, 2, 2, 2, 2, 3 }, 3)); // 1
+            Console.WriteLine(SortingAlgorithms.SortedFrequency(new int[] { 1, 1, 2, 2, 2, 2, 3 }, 1)); // 2
+            Console.WriteLine(SortingAlgorithms.SortedFrequency(new int[] { 1, 1, 2, 2, 2, 2, 3 }, 4)); // -1
 
 
 
