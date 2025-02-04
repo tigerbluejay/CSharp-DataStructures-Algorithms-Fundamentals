@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharp_DataStructures_Algorithms_Fundamentals._10_Singly_Linked_List;
+using System;
 using System.Collections.Generic;
 
 namespace CSharp_DataStructures_Algorithms_Fundamentals
@@ -381,17 +382,17 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 
             int[] arrLS = { 34, 51, 1, 2, 3, 45, 56, 687 };
             int targetLS = 56;
-            Console.WriteLine(SearchingAlgorithms.LinearSearch(arrLS, targetLS); // Output: 6
+            Console.WriteLine(SearchingAlgorithms.LinearSearch(arrLS, targetLS)); // Output: 6
 
 
             int[] arrBS = { 2, 5, 6, 9, 13, 15, 28, 30 };
             int targetBS = 28;
-            Console.WriteLine(SearchingAlgorithms.BinarySearch(arrBS, targetBS); // Output: 6
-            Console.WriteLine(SearchingAlgorithms.BinarySearchR(arrBS, targetBS); // Output: 6
+            Console.WriteLine(SearchingAlgorithms.BinarySearch(arrBS, targetBS)); // Output: 6
+            Console.WriteLine(SearchingAlgorithms.BinarySearchR(arrBS, targetBS)); // Output: 6
 
             string longStrSS = "lorie loled";
             string shortStrSS = "lol";
-            Console.WriteLine(SearchingAlgorithms.NaiveSearchSS(longStrSS, shortStrSS); // Output: 1
+            Console.WriteLine(SearchingAlgorithms.NaiveSearchSS(longStrSS, shortStrSS)); // Output: 1
 
             ////////////////////////////////////////////////////////////
             /////////////// 09- SORTING ALGORITHMS /////////////////////
@@ -435,7 +436,7 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             Console.WriteLine(string.Join(", ", resultMS));
 
             int[] arrPQS = { 4, 8, 2, 1, 5, 7, 6, 3 };
-            int pivotIndexPQS = SortingAlgorithms.Pivot(arr, 0, arr.Length - 1);
+            int pivotIndexPQS = SortingAlgorithms.Pivot(arrPQS, 0, arrPQS.Length - 1);
             Console.WriteLine("Pivot index: " + pivotIndexPQS);
             Console.WriteLine("Array after pivot: " + string.Join(", ", arrPQS));
 
@@ -468,8 +469,21 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             Console.WriteLine(SortingAlgorithms.SortedFrequency(new int[] { 1, 1, 2, 2, 2, 2, 3 }, 1)); // 2
             Console.WriteLine(SortingAlgorithms.SortedFrequency(new int[] { 1, 1, 2, 2, 2, 2, 3 }, 4)); // -1
 
+			////////////////////////////////////////////////////////////
+			////////////// 10- SINGLY LINKED LIST //////////////////////
+			////////////////////////////////////////////////////////////
 
+            SinglyLinkedList SSL1 = new SinglyLinkedList();
+            SSL1.Push("A");
+			SSL1.Push("B"); 
+            SSL1.Push("C");
+			SSL1.Push("D");
+			SSL1.Pop();
 
-        }
-    }
+            SSL1.Shift();
+            SSL1.Unshift("A");
+
+		}
+	}
 }
+
