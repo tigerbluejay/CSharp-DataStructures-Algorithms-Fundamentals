@@ -469,21 +469,44 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             Console.WriteLine(SortingAlgorithms.SortedFrequency(new int[] { 1, 1, 2, 2, 2, 2, 3 }, 1)); // 2
             Console.WriteLine(SortingAlgorithms.SortedFrequency(new int[] { 1, 1, 2, 2, 2, 2, 3 }, 4)); // -1
 
-			////////////////////////////////////////////////////////////
-			////////////// 10- SINGLY LINKED LIST //////////////////////
-			////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////
+            ////////////// 10- SINGLY LINKED LIST //////////////////////
+            ////////////////////////////////////////////////////////////
 
             SinglyLinkedList SSL1 = new SinglyLinkedList();
+
+            // Initial state
             SSL1.Push("A");
-			SSL1.Push("B"); 
+            SSL1.Push("B");
             SSL1.Push("C");
-			SSL1.Push("D");
-			SSL1.Pop();
+            SSL1.Push("D");
+            // List after these operations: "A B C D"
+            // Pop removes the last item ("D")
+            SSL1.Pop();
+            // List after Pop: "A B C" (since D is removed)
 
+            // Shift removes the first item ("A")
             SSL1.Shift();
+            // List after Shift: "B C" (A is removed)
+            // Unshift inserts "A" at the beginning
             SSL1.Unshift("A");
+            // List after Unshift: "A B C" (A is added to the front)
 
-		}
-	}
+            // Get retrieves the node at index 2 (which is "C" at the moment)
+            // Set updates the value at index 2 (from "C" to "c")
+            SSL1.Get(2); // Retrieves "C"
+            SSL1.Set(2, "c");
+            // List after Set: "A B c" (C becomes c)
+            // Set updates the value at index 2 again (from "c" to "C")
+            SSL1.Set(2, "C");
+            // List after Set: "A B C" (c becomes C)
+
+            // Insert inserts "c2" at index 2 (between "B" and "C")
+            SSL1.Insert(2, "c2");
+            // List after Insert: "A B c2 C"
+            // Remove removes the node at index 2 (which is "c2")
+            SSL1.Remove(2);
+            // List after Remove: "A B C" (c2 is removed)
+        }
+    }
 }
-
