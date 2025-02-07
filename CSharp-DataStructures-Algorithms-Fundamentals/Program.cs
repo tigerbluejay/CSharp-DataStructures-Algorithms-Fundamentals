@@ -507,6 +507,17 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             // Remove removes the node at index 2 (which is "c2")
             SSL1.Remove(2);
             // List after Remove: "A B C" (c2 is removed)
+
+            SSL1.Print();
+            SSL1.Reverse();
+            SSL1.Print();
+            SSL1.Reverse();
+            SSL1.Print();
+            // List after last Print: "A B C"
+
+            SSL1.Rotate(2);
+            SSL1.Print();
+            // List after Rotation: "C A B"
         }
     }
 }
