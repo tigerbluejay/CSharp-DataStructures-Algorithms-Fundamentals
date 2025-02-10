@@ -473,51 +473,77 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             ////////////// 10- SINGLY LINKED LIST //////////////////////
             ////////////////////////////////////////////////////////////
 
-            SinglyLinkedList SSL1 = new SinglyLinkedList();
+            SinglyLinkedList SLL1 = new SinglyLinkedList();
 
             // Initial state
-            SSL1.Push("A");
-            SSL1.Push("B");
-            SSL1.Push("C");
-            SSL1.Push("D");
+            SLL1.Push("A");
+            SLL1.Push("B");
+            SLL1.Push("C");
+            SLL1.Push("D");
             // List after these operations: "A B C D"
             // Pop removes the last item ("D")
-            SSL1.Pop();
+            SLL1.Pop();
             // List after Pop: "A B C" (since D is removed)
 
             // Shift removes the first item ("A")
-            SSL1.Shift();
+            SLL1.Shift();
             // List after Shift: "B C" (A is removed)
             // Unshift inserts "A" at the beginning
-            SSL1.Unshift("A");
+            SLL1.Unshift("A");
             // List after Unshift: "A B C" (A is added to the front)
 
             // Get retrieves the node at index 2 (which is "C" at the moment)
             // Set updates the value at index 2 (from "C" to "c")
-            SSL1.Get(2); // Retrieves "C"
-            SSL1.Set(2, "c");
+            SLL1.Get(2); // Retrieves "C"
+            SLL1.Set(2, "c");
             // List after Set: "A B c" (C becomes c)
             // Set updates the value at index 2 again (from "c" to "C")
-            SSL1.Set(2, "C");
+            SLL1.Set(2, "C");
             // List after Set: "A B C" (c becomes C)
 
             // Insert inserts "c2" at index 2 (between "B" and "C")
-            SSL1.Insert(2, "c2");
+            SLL1.Insert(2, "c2");
             // List after Insert: "A B c2 C"
             // Remove removes the node at index 2 (which is "c2")
-            SSL1.Remove(2);
+            SLL1.Remove(2);
             // List after Remove: "A B C" (c2 is removed)
 
-            SSL1.Print();
-            SSL1.Reverse();
-            SSL1.Print();
-            SSL1.Reverse();
-            SSL1.Print();
+            SLL1.Print();
+            SLL1.Reverse();
+            SLL1.Print();
+            SLL1.Reverse();
+            SLL1.Print();
             // List after last Print: "A B C"
 
-            SSL1.Rotate(2);
-            SSL1.Print();
+            SLL1.Rotate(2);
+            SLL1.Print();
             // List after Rotation: "C A B"
+
+
+            ////////////////////////////////////////////////////////////
+            ////////////// 11- DOUBLY LINKED LIST //////////////////////
+            ////////////////////////////////////////////////////////////
+
+            DoublyLinkedList DLL1 = new DoublyLinkedList();
+
+            // Initial state
+            DLL1.Push("A");
+            DLL1.Push("B");
+            DLL1.Push("C");
+            DLL1.Push("D");
+            // List after these operations: "A B C D"
+            // Pop removes the last item ("D")
+            DLL1.Pop();
+            // List after Pop: "A B C" (since D is removed)
+
+            // Shift removes the first item ("A")
+            DLL1.Shift();
+            // List after Shift: "B C" (A is removed)
+            // Unshift inserts "A" at the beginning
+            DLL1.Unshift("A");
+            // List after Unshift: "A B C" (A is added to the front)
+
+
         }
     }
 }

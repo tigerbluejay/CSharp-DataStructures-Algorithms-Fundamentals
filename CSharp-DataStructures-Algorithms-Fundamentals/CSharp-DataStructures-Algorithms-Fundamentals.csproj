@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>CSharp_DataStructures_Algorithms_Fundamentals</RootNamespace>
   </PropertyGroup>
 
@@ -16,6 +16,7 @@
     <None Remove="07-Recursion IV\" />
     <None Remove="08-Searching Algorithms\" />
     <None Remove="09-Sorting Algorithms\" />
+    <None Remove="11-Doubly Linked List\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01-Frequency Counters\" />
@@ -27,5 +28,6 @@
     <Folder Include="07-Recursion IV\" />
     <Folder Include="08-Searching Algorithms\" />
     <Folder Include="09-Sorting Algorithms\" />
+    <Folder Include="11-Doubly Linked List\" />
   </ItemGroup>
 </Project>
