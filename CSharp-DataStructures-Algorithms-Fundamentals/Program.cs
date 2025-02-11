@@ -543,6 +543,24 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             DLL1.Unshift("A");
             // List after Unshift: "A B C" (A is added to the front)
 
+            // Get retrieves the node at index 2 (which is "C" at the moment)
+            // Set updates the value at index 2 (from "C" to "c")
+            DLL1.Get(2); // Retrieves "C"
+            DLL1.Set(2, "c");
+            // List after Set: "A B c" (C becomes c)
+            // Set updates the value at index 2 again (from "c" to "C")
+            DLL1.Set(2, "C");
+            // List after Set: "A B C" (c becomes C)
+
+            // Insert inserts "c2" at index 2 (between "B" and "C")
+            DLL1.Insert(2, "c2");
+            // List after Insert: "A B c2 C"
+            // Remove removes the node at index 2 (which is "c2")
+            DLL1.Remove(2);
+            // List after Remove: "A B C" (c2 is removed)
+
+            DLL1.Reverse();
+            // List after Reverse: "C B A"
 
         }
     }
