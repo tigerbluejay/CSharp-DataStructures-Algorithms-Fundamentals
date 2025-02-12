@@ -582,11 +582,26 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             queue.Enqueue(3);
             queue.Enqueue(4);
             queue.Dequeue();
-            // FIFO 2,3,4
+			// FIFO 2,3,4
 
+			////////////////////////////////////////////////////////////
+			////////////// 13- BINARY SEARCH TREES  /////////////////////
+			////////////////////////////////////////////////////////////
 
+            BinarySearchTree bst = new BinarySearchTree();
+            //      10
+            //   5     13
+            // 2  7  11  16
+            bst.Insert(10);
+            bst.Insert(5);
+            bst.Insert(13);
+            bst.Insert(7);
+            bst.Insert(11);
+            bst.Insert(16);
+            bst.Insert(2);
 
-
+            BSTNode bsfindtres = bst.Find(11); // returns node with val 11
+            bool bstcontainsres = bst.Contains(11); // true
 
 		}
 	}
