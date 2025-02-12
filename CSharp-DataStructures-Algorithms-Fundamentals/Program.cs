@@ -1,6 +1,7 @@
 ﻿using CSharp_DataStructures_Algorithms_Fundamentals._10_Singly_Linked_List;
 using System;
 using System.Collections.Generic;
+using static CSharp_DataStructures_Algorithms_Fundamentals.StacksandQueues;
 
 namespace CSharp_DataStructures_Algorithms_Fundamentals
 {
@@ -562,6 +563,31 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             DLL1.Reverse();
             // List after Reverse: "C B A"
 
-        }
-    }
+
+            ////////////////////////////////////////////////////////////
+            ////////////// 12- STACKS AND QUEUES  //////////////////////
+            ////////////////////////////////////////////////////////////
+            ///
+            CustomStack stack = new CustomStack();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Pop();
+            // LIFO 3,2,1
+
+            CustomQueue queue = new CustomQueue();
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            queue.Enqueue(4);
+            queue.Dequeue();
+            // FIFO 2,3,4
+
+
+
+
+
+		}
+	}
 }
