@@ -603,6 +603,23 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             BSTNode bsfindtres = bst.Find(11); // returns node with val 11
             bool bstcontainsres = bst.Contains(11); // true
 
+            bst.Remove(11); // removes node with val 11
+
+            List<int> preOrderRes = bst.DFSPreOrder(); // 10 5 2 7 13 11 16 
+			List<int> InOrderRes = bst.DFSInOrder(); // 2 5 7 10 11 13 16
+			List<int> postOrderRes = bst.DFSPostOrder(); // 2 7 5 11 16 13 10
+			List<int> bfsRes = bst.BFS(); // 10 4 13 2 7 11 16
+
+            // if tree were:
+			//          10
+			//        6     15
+			//      3   8      20
+
+			// Depth First Pre Order: 10 6 3 8 15 20
+			// Depth First In Order: 3 6 8 10 15 20
+			// Depth First Post Order: 3 8 6 20 15 10
+			// Breadth First: 10 6 15 3 8 20
+
 		}
 	}
 }
