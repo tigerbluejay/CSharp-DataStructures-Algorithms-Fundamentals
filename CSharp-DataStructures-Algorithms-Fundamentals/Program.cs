@@ -1,6 +1,7 @@
 ﻿using CSharp_DataStructures_Algorithms_Fundamentals._10_Singly_Linked_List;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using static CSharp_DataStructures_Algorithms_Fundamentals.StacksandQueues;
 
 namespace CSharp_DataStructures_Algorithms_Fundamentals
@@ -611,15 +612,47 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 			List<int> bfsRes = bst.BFS(); // 10 4 13 2 7 11 16
 
             // if tree were:
-			//          10
-			//        6     15
-			//      3   8      20
+            //          10
+            //        6     15
+            //      3   8      20
 
-			// Depth First Pre Order: 10 6 3 8 15 20
-			// Depth First In Order: 3 6 8 10 15 20
-			// Depth First Post Order: 3 8 6 20 15 10
-			// Breadth First: 10 6 15 3 8 20
+            // Depth First Pre Order: 10 6 3 8 15 20
+            // Depth First In Order: 3 6 8 10 15 20
+            // Depth First Post Order: 3 8 6 20 15 10
+            // Breadth First: 10 6 15 3 8 20
 
+            bool isTreeBalanced = bst.IsBalanced(); // true
+            /*
+            CheckHeight(10)
+            ├── CheckHeight(5)
+            │   ├── CheckHeight(2)
+            │   │   ├── CheckHeight(null) → 0
+            │   │   ├── CheckHeight(null) → 0
+            │   │   └── Max(0, 0) + 1 → 1
+            │   ├── CheckHeight(7)
+            │   │   ├── CheckHeight(null) → 0
+            │   │   ├── CheckHeight(null) → 0
+            │   │   └── Max(0, 0) + 1 → 1
+            │   └── Max(1, 1) + 1 → 2
+            ├── CheckHeight(13)
+            │   ├── CheckHeight(11)
+            │   │   ├── CheckHeight(null) → 0
+            │   │   ├── CheckHeight(null) → 0
+            │   │   └── Max(0, 0) + 1 → 1
+            │   ├── CheckHeight(16)
+            │   │   ├── CheckHeight(null) → 0
+            │   │   ├── CheckHeight(null) → 0
+            │   │   └── Max(0, 0) + 1 → 1
+            │   └── Max(1, 1) + 1 → 2
+            └── Max(2, 2) + 1 → 3
+            */
+
+            BSTNode largestNode = bst.FindLargestNode(bst.Root); // find the largest, in this case: 16
+                                                                 //      10
+                                                                 //   5     13
+                                                                 // 2  7  11  16
+
+            int? secondLargestNode = bst.FindSecondLargest();  // in this case 13
 		}
 	}
 }
