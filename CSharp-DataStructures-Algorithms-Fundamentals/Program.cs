@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Xml.Linq;
 using static CSharp_DataStructures_Algorithms_Fundamentals.StacksandQueues;
 
 namespace CSharp_DataStructures_Algorithms_Fundamentals
@@ -653,6 +654,52 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
                                                                  // 2  7  11  16
 
             int? secondLargestNode = bst.FindSecondLargest();  // in this case 13
+
+
+			////////////////////////////////////////////////////////////
+			////////////// 12- BINARY HEAP /////////////////////////////
+			////////////////////////////////////////////////////////////
+
+			MaxBinaryHeap heap = new MaxBinaryHeap();
+			// (P denotes the parent of the last element inserted)
+	        heap.Insert(41); // 41P
+			heap.Insert(39); // 41P (39)
+			heap.Insert(33); // 41P (39 33)
+			heap.Insert(18); // 41 39P 33 (18)
+			heap.Insert(27); // 41 39P 33 (18 27)
+			heap.Insert(12); // 41 39 33P 18 27 (12)
+			heap.Insert(55); // 41 39 33P 18 27 (12 55) => swap parent for child
+			                 // (because child 55 is greater than parent 33)
+					         // 41 39 55P 18 27 (12 33) 
+				             // 55P (39 41) 18 27 12 33 => swap parent for child
+					         // (because child 55 is greater than parent 41)
+        	heap.PrintHeap();
+
+            int maxHeapval = heap.ExtractMax(); // obtain max heap val, and evaluate heap to see how it's been rearranged (with sink down)
+												// 41 39 33 18 27 12
+
+
+			PriorityQueue ER = new PriorityQueue();
+
+			// Order of calls and expected behavior:
+
+			ER.Enqueue("common cold", 5);
+			ER.Enqueue("gunshot wound", 1);
+			// Gunshot wound (1) is compared to common cold (5) and swapped to root.
+
+			ER.Enqueue("high fever", 4);
+			// High fever (4) is placed as the right child of common cold (5).
+
+			ER.Enqueue("broken arm", 2);
+			// Broken arm (2) is compared to common cold (5) and swapped.
+			// Then compared to gunshot wound (1) and not swapped.
+
+			ER.Enqueue("glass in foot", 3);
+			// Glass in foot (3) is placed as the child of broken arm (2) without needing to swap.
+
+			ER.Dequeue();
+			// Gunshot wound (1) is removed and the heap is rearranged.
+			// Broken arm (2) becomes the new root, and the heap is adjusted.
 		}
 	}
 }
