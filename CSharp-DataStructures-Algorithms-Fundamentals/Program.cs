@@ -657,7 +657,7 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 
 
 			////////////////////////////////////////////////////////////
-			////////////// 12- BINARY HEAP /////////////////////////////
+			////////////// 14- BINARY HEAP /////////////////////////////
 			////////////////////////////////////////////////////////////
 
 			MaxBinaryHeap heap = new MaxBinaryHeap();
@@ -698,8 +698,39 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 			// Glass in foot (3) is placed as the child of broken arm (2) without needing to swap.
 
 			ER.Dequeue();
-			// Gunshot wound (1) is removed and the heap is rearranged.
-			// Broken arm (2) becomes the new root, and the heap is adjusted.
+            // Gunshot wound (1) is removed and the heap is rearranged.
+            // Broken arm (2) becomes the new root, and the heap is adjusted.
+
+            ////////////////////////////////////////////////////////////
+            ////////////// 15- HASH TABLES /////////////////////////////
+            ////////////////////////////////////////////////////////////
+
+            // creates a hash for the string
+            int hashResult = HashTables.Hash("josemariairiarte", 5);
+			int hashResult2 = HashTables.Hash2("josemariairiarte", 5);
+
+            HashTables hashTable = new HashTables();
+
+            // sets key value pairs in a List<keyvaluepairs<string,string>>
+            // the amount of items in the list will depend on the Hash funcion
+			hashTable.Set("teacher", "mary");
+			hashTable.Set("professor", "john");
+			hashTable.Set("developer", "jose");
+			string HTvalue = hashTable.Get("developer"); // jose
+
+            List<string> HTkeys = hashTable.Keys(); // "teacher", "professor", "developer"
+            List<string> HTvalues = hashTable.Values(); // "mary", "john", "jose"
+
+            
+
+
+
+
+
+
+
+
+
 		}
 	}
 }
