@@ -721,12 +721,43 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             List<string> HTkeys = hashTable.Keys(); // "teacher", "professor", "developer"
             List<string> HTvalues = hashTable.Values(); // "mary", "john", "jose"
 
-            
 
+            ////////////////////////////////////////////////////////////
+            ////////////////// 16 - GRAPHS /////////////////////////////
+            ////////////////////////////////////////////////////////////
 
+            Graph graph = new Graph();
 
+            graph.AddVertex("A");
+			graph.AddVertex("B");
+			graph.AddVertex("C");
+			graph.AddVertex("D");
+			graph.AddVertex("E");
+			graph.AddVertex("F");
 
+            graph.AddEdge("A", "B");
+			graph.AddEdge("A", "C");
+            graph.AddEdge("B", "D");
+			graph.AddEdge("C", "E");
+			graph.AddEdge("D", "E");
+			graph.AddEdge("D", "F");
+			graph.AddEdge("E", "F");
 
+            //          A
+            //        /   \
+            //       B     C
+            //       |     |
+            //       D --- E
+            //        \   /
+            //          F
+
+            List<string> graphResult1 = graph.DepthFirstRecursive("A"); // A, B, D, E, C, F
+
+            // iterative solution adds to the stack all the neighbors and pops the last, that's
+            // why we start with A, add B and C, and pop C and so forth *instead of B like in the recursive solution.
+			List<string> graphResult2 = graph.DepthFirstIterative("A"); // A, C, E, F, D, B
+
+			List<string> graphResult3 = graph.BreadthFirst("A"); // A, B, C, D, E, F
 
 
 
