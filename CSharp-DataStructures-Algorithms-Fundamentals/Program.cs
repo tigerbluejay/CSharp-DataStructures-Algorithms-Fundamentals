@@ -759,7 +759,43 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 
 			List<string> graphResult3 = graph.BreadthFirst("A"); // A, B, C, D, E, F
 
+			//////////////////////////////////////////////////////////////////
+			////////// 17 - DIJKSTRA'S ALGORITHM /////////////////////////////
+			//////////////////////////////////////////////////////////////////
 
+
+			var wgraph = new WeightedGraph();
+			wgraph.AddVertex("A");
+			wgraph.AddVertex("B");
+			wgraph.AddVertex("C");
+			wgraph.AddVertex("D");
+			wgraph.AddVertex("E");
+			wgraph.AddVertex("F");
+
+			wgraph.AddEdge("A", "B", 4);
+			wgraph.AddEdge("A", "C", 2);
+			wgraph.AddEdge("B", "E", 3);
+			wgraph.AddEdge("C", "D", 2);
+			wgraph.AddEdge("D", "E", 3);
+			wgraph.AddEdge("D", "F", 1);
+			wgraph.AddEdge("E", "F", 1);
+			/*
+				 A
+				/ \
+			   2   4
+			  /     \
+			 C-------B
+			 |       |
+			 2       3
+			 |       |
+			 D---3---E
+			  \     /
+			   1   1
+				\ /
+				 F
+			*/
+			List<string> wgraphresult = wgraph.Dijkstra("A", "E");
+			Console.WriteLine(string.Join(" -> ", wgraphresult)); // A -> C -> D -> F -> E (6)
 
 
 		}
