@@ -815,6 +815,20 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 
 			List<string> wgraph2result = wgraph2.Dijkstra("A", "E");
 			Console.WriteLine(string.Join(" -> ", result)); // A -> C -> D -> F -> E (6)
+
+
+            //////////////////////////////////////////////////////////////////
+            ////////// 18 - DYNAMIC PROGRAMMING  /////////////////////////////
+            //////////////////////////////////////////////////////////////////
+
+            int fibonacciRes = DynamicProgramming.Fibonacci(6);
+            int fibonacciRes2 = DynamicProgramming.FibonacciMemoized(6);
+            int fibonacciRes3 = DynamicProgramming.FibonacciBottomUp(6);
+
+            int[] coinDenominations = [1, 2, 5];
+            int tragetAmount = 5;
+            int coinProblemRes = DynamicProgramming.CountWaysToMakeChange(coinDenominations, tragetAmount);
+
 		}
 	}
 }
