@@ -797,7 +797,24 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
 			List<string> wgraphresult = wgraph.Dijkstra("A", "E");
 			Console.WriteLine(string.Join(" -> ", wgraphresult)); // A -> C -> D -> F -> E (6)
 
+			var wgraph2 = new WeightedGraph2();
+			wgraph2.AddVertex("A");
+			wgraph2.AddVertex("B");
+			wgraph2.AddVertex("C");
+			wgraph2.AddVertex("D");
+			wgraph2.AddVertex("E");
+			wgraph2.AddVertex("F");
 
+			wgraph2.AddEdge("A", "B", 4);
+			wgraph2.AddEdge("A", "C", 2);
+			wgraph2.AddEdge("B", "E", 3);
+			wgraph2.AddEdge("C", "D", 2);
+			wgraph2.AddEdge("D", "E", 3);
+			wgraph2.AddEdge("D", "F", 1);
+			wgraph2.AddEdge("E", "F", 1);
+
+			List<string> wgraph2result = wgraph2.Dijkstra("A", "E");
+			Console.WriteLine(string.Join(" -> ", result)); // A -> C -> D -> F -> E (6)
 		}
 	}
 }
