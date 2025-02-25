@@ -829,6 +829,31 @@ namespace CSharp_DataStructures_Algorithms_Fundamentals
             int tragetAmount = 5;
             int coinProblemRes = DynamicProgramming.CountWaysToMakeChange(coinDenominations, tragetAmount);
 
+            //////////////////////////////////////////////////////////////////
+            //////////////////////// 19 - TRIES  /////////////////////////////
+            //////////////////////////////////////////////////////////////////
+
+            Trie trie = new Trie();
+            trie.AddWord("fun");
+			trie.AddWord("fast");
+			trie.AddWord("fat");
+			trie.AddWord("fate");
+			trie.AddWord("father");
+			trie.AddWord("forget");
+			trie.AddWord("awesome");
+			trie.AddWord("argue");
+
+            Trie trieRes = trie.FindWord("fate");
+			// awe is not a word so it returns false, but other characters returnes include s from "awesome"
+			Trie trieRes2 = trie.FindWord("awe"); 
+
+            List<string> wordsGot = trie.GetWords();
+			List<string> wordsAutocompleted = trie.AutoComplete("fat");
+
+            trie.RemoveWord("argue");
+			List<string> wordsGot2 = trie.GetWords();
+
+            Console.WriteLine();
 		}
 	}
 }
