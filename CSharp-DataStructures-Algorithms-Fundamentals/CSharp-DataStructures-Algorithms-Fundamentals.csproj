@@ -19,7 +19,6 @@
     <None Remove="11-Doubly Linked List\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="01-Frequency Counters\" />
     <Folder Include="02-Multiple Pointers\" />
     <Folder Include="03-Sliding Window\" />
     <Folder Include="04-Recursion\" />
