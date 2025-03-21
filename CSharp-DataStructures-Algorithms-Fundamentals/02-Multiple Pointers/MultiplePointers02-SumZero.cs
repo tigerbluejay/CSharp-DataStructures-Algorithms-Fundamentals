@@ -32,7 +32,9 @@ null if a pair does not exist
 
         // Since the array is sorted in increasing order, the elements are
         // arranged from the smallest to the largest.
-        // In order to make the sum smaller, you need to decrease the larger number. Since the array is sorted, the right pointer points to the largest number, and by moving it left (right--), you are reducing the larger number.
+        // In order to make the sum smaller, you need to decrease the larger number.
+        // Since the array is sorted, the right pointer points to the largest number,
+        // and by moving it left (right--), you are reducing the larger number.
 
         // By decreasing the right pointer (when the sum is greater than 0), you are
         // effectively trying a smaller number for the second element, which might
